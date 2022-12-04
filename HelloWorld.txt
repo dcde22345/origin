@@ -1,6 +1,0 @@
-#include <std.io>
-
-int main (void){
-	printf("I like C Program.");
-	return 0;
-}
