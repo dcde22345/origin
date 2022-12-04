@@ -139,7 +139,7 @@ int main(void){
 
 
     char array[100], answer[20];
-    char exclamation;
+    char exclamation = ' ';
     int i = 0, j = 0;
 
     while(array[i - 1] != '\n'){
@@ -153,15 +153,15 @@ int main(void){
             break;
         }
     }
-
+    i -= 1;
     while(i >= 0){
-        if(array[i] != ' ' || a){
+        if(array[i] != ' '){
             answer[j] = array[i];
             j++;
         }else{
             for(j -= 1; j >= 0; j--){
                 if(answer[j] == '\n')
-                    printf(" ");
+                    ;
                 else
                     printf("%c", answer[j]);
             }
@@ -170,5 +170,7 @@ int main(void){
         }
         i--;
     }
+    for(j -= 1; j>=0; j--)
+        printf("%c", answer[j]);
     printf("%c", exclamation);
 }
