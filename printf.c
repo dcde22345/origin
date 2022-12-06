@@ -3,24 +3,14 @@
 #include <time.h>
 
 int main(void){
-    char ch;
-    char answer[100];
-    int i = 0;
-    while(ch != '\n'){
-        ch = toupper(getchar());
-        switch(ch){
-            case 'A': answer[i] = "4"; break;
-            case 'B': printf("8"); break;
-            case 'E': printf("3"); break;
-            case 'I': printf("1"); break;
-            case 'O': printf("0"); break;
-            case 'S': printf("5"); break;
-            case '\n':
-            default: printf("%c", ch); break;
-        }
-        i++;
+    char array[80];
+    printf("Enter");
+    scanf("%s", array);
+    for(int i = 0; i >= 0;i++){
+        if(array[i] == 0)
+            break;
+        printf("%c", array[i]);
     }
-    printf("%s", answer);
-
+    
     return 0;
 }

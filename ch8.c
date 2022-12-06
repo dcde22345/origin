@@ -138,39 +138,98 @@ int main(void){
 
 
 
-    char array[100], answer[20];
-    char exclamation = ' ';
-    int i = 0, j = 0;
+    // char array[100], answer[20];
+    // char exclamation = ' ';
+    // int i = 0, j = 0;
 
-    while(array[i - 1] != '\n'){
-        array[i] = getchar();
-        switch (array[i]){
-        case '!': case '?': case '.':
-            exclamation = array[i];
-            break;
-        default:
-            i++;
-            break;
-        }
+    // while(array[i - 1] != '\n'){
+    //     array[i] = getchar();
+    //     switch (array[i]){
+    //     case '!': case '?': case '.':
+    //         exclamation = array[i];
+    //         break;
+    //     default:
+    //         i++;
+    //         break;
+    //     }
+    // }
+    // i -= 1;
+    // while(i >= 0){
+    //     if(array[i] != ' '){
+    //         answer[j] = array[i];
+    //         j++;
+    //     }else{
+    //         for(j -= 1; j >= 0; j--){
+    //             if(answer[j] == '\n')
+    //                 ;
+    //             else
+    //                 printf("%c", answer[j]);
+    //         }
+    //         printf(" ");
+    //         j = 0;
+    //     }
+    //     i--;
+    // }
+    // for(j -= 1; j>=0; j--)
+    //     printf("%c", answer[j]);
+    // printf("%c", exclamation);
+
+
+
+    // char ch;
+    // char string[80];
+    // int i, j, shift_amount;
+    // printf("Enter message to be encrypted: ");
+    // for(i = 0; i < sizeof string/sizeof string[0]; i++){
+    //     ch = getchar();
+    //     if(ch == '\n')
+    //         break;
+    //     string[i] = ch;
+    // }
+    
+    // printf("Enter shift amount (1-25): ");
+    // scanf("%d", &shift_amount);
+    
+    // for(j = 0; j < i; j++){
+    //     if(string[j] >= 'A' && string[j] <= 'Z'){
+    //         string[j] = (string[j] - 'A' + shift_amount) % 26 + 'A';
+    //     }else if(string[j] >= 'a' && string[j] <= 'z'){
+    //         string[j] = (string[j] - 'a' + shift_amount) % 26 + 'a';
+    //     }
+    // }
+
+    // printf("Encrypted message: ");
+    // for(j = 0; j < i; j++)
+    //     printf("%c", string[j]);
+
+
+
+    char string1[20],string2[20], ch;
+    int i = 0, j = 0, k, l;
+
+    printf("Enter first word: ");
+    while(ch != '\n'){
+        ch = getchar();
+        string1[i] = ch;
+        i++;
     }
-    i -= 1;
-    while(i >= 0){
-        if(array[i] != ' '){
-            answer[j] = array[i];
-            j++;
-        }else{
-            for(j -= 1; j >= 0; j--){
-                if(answer[j] == '\n')
-                    ;
-                else
-                    printf("%c", answer[j]);
-            }
-            printf(" ");
-            j = 0;
-        }
-        i--;
+    printf("Enter second word: "); 
+    while(ch != '\n'){
+        ch = getchar();
+        string2[j] = ch;
+        j++;
     }
-    for(j -= 1; j>=0; j--)
-        printf("%c", answer[j]);
-    printf("%c", exclamation);
+
+    if(i != j)
+        printf("The words are not anagrams.");
+    
+    for(k = 0; k <= i; k++){
+        for(l = 0, l <= i, )
+    }
+    
+    
+    
+    printf("The words are not anagrams.");
+            
+    printf("The words are anagrams.");
 }
